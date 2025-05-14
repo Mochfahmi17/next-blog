@@ -27,7 +27,7 @@ const MobileNav = ({ open, setOpen, session, category }: MobileNavProps) => {
         <ul className="flex flex-col font-semibold">
           <li onClick={() => setOpen(false)}>
             <Link
-              href="#"
+              href="/"
               className="block w-full rounded-sm px-2 py-2 hover:bg-slate-50"
             >
               Home
