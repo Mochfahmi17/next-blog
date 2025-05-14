@@ -44,3 +44,8 @@ export const verifySendEmailOtpTemplate = (code: string) => {
 
 </html>`;
 };
+
+export const contactEmailTemplate = (name: string, message: string) => {
+  return `<p>from, ${name}</p>
+  <p>${message}</p>`;
+};

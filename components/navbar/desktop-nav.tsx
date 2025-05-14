@@ -21,7 +21,7 @@ const DesktopNav = ({ category }: DesktopNavProps) => {
           <Link href="/about-us">About Us</Link>
         </li>
         <li>
-          <Link href="#">Contact</Link>
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

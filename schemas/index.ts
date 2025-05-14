@@ -43,3 +43,14 @@ export const blogSchema = object({
     required_error: "Please select post status.",
   }),
 });
+
+export const contactSchema = object({
+  name: string().min(1, "Name is required."),
+  email: string().min(1, "Email is required.").email("Invalid email."),
+  subject: string()
+    .min(1, "Subject is required.")
+    .max(200, "Subject cannot exceed 200 characters."),
+  message: string()
+    .min(1, "Message is required.")
+    .max(255, "MEssage cannot exceed 255 characters."),
+});
