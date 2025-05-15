@@ -14,7 +14,7 @@ const DesktopNav = ({ category }: DesktopNavProps) => {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="#">Explore</Link>
+          <Link href="/explore">Explore</Link>
         </li>
         <DropdownNav title="Category" category={category} />
         <li>
