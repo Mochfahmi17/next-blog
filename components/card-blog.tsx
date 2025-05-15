@@ -18,19 +18,19 @@ type CardBlogProps = {
 
 const CardBlog = ({ blog }: CardBlogProps) => {
   return (
-    <Card className="w-sm border-0 shadow-none">
-      <CardHeader>
+    <Card className="w-full border-0 shadow-none">
+      <CardHeader className="px-0">
         <Link href={`/blog/${blog.slug}`} title={blog.title}>
           <Image
             src={blog.image}
             alt={blog.title}
-            width={400}
+            width={500}
             height={20}
             className="aspect-[3/2] rounded-3xl object-cover object-center"
           />
         </Link>
       </CardHeader>
-      <CardContent className="space-y-2">
+      <CardContent className="space-y-2 px-0">
         <Link
           href={`/blog/${blog.slug}`}
           title={blog.title}
@@ -44,10 +44,10 @@ const CardBlog = ({ blog }: CardBlogProps) => {
           {getExcerpt(blog.content)}
         </p>
       </CardContent>
-      <CardFooter className="line-clamp-1 flex items-center gap-2">
+      <CardFooter className="line-clamp-1 flex items-center gap-2 px-0">
         <Avatar>
           <Image
-            src={blog.author.image || "/people.jpeg"}
+            src={blog.author.image || "/user.png"}
             alt={blog.author.name}
             width={50}
             height={50}

@@ -1,6 +1,7 @@
 import CardBlog from "@/components/card-blog";
 import { Button } from "@/components/ui/button";
 import { getLatestBlogs } from "@/data/post";
+import Link from "next/link";
 import { use } from "react";
 
 const RecentBlogPosts = () => {
@@ -17,8 +18,8 @@ const RecentBlogPosts = () => {
           ))}
         </div>
         <div className="mt-8 flex justify-center">
-          <Button size="lg" className="cursor-pointer">
-            Loading more...
+          <Button size="lg" asChild className="cursor-pointer">
+            <Link href="/explore">See More</Link>
           </Button>
         </div>
       </div>

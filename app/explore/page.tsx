@@ -1,9 +1,13 @@
 import Explore from "@/components/explore/explore";
 
-export default function ExplorePage() {
+type ExplorePageProps = {
+  searchParams: { page?: string };
+};
+
+export default function ExplorePage({ searchParams }: ExplorePageProps) {
   return (
     <main>
-      <Explore />
+      <Explore searchParams={searchParams} />
     </main>
   );
 }

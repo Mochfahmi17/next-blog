@@ -55,9 +55,9 @@ const DashboardNavbar = ({ session }: { session: Session | null }) => {
             variant="ghost"
             className="rounded-full p-0"
           >
-            <Avatar>
+            <Avatar className="bg-slate-100">
               <AvatarImage
-                src={session?.user.image || "/people.jpeg"}
+                src={session?.user.image || "/user.png"}
                 alt={session?.user.name || "User"}
                 width={50}
                 height={50}

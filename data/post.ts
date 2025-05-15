@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import { db } from "@/lib/db";
+import { Prisma } from "@prisma/client";
 
 export async function getPostsByAuthor() {
   try {
@@ -60,4 +61,32 @@ export async function getBlogBySlug(slug: string) {
   } catch (error) {
     console.log(error);
   }
+}
+
+export async function getPaginatedPosts(
+  page: number = 1,
+  limit: number = 12,
+  query: string = "",
+) {
+  const skip = (page - 1) * limit;
+
+  const where: Prisma.PostWhereInput = {
+    status: "Publish",
+    ...(query && { title: { contains: query, mode: "insensitive" } }),
+  };
+
+  const [posts, totalPosts] = await Promise.all([
+    db.post.findMany({
+      where,
+      orderBy: { createdAt: "desc" },
+      include: { category: true, author: true },
+      skip,
+      take: limit,
+    }),
+    db.post.count({ where }),
+  ]);
+
+  const totalPages = Math.ceil(totalPosts / limit);
+
+  return { posts, totalPages };
 }

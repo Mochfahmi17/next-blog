@@ -47,7 +47,7 @@ const DropdownNav = ({ title, category }: DropdownNavProps) => {
             {category?.map((item) => (
               <li key={item.id}>
                 <Link
-                  href={`/blog/category/${item.name}`}
+                  href={`/explore/category/${item.name}`}
                   className="block w-full p-2 hover:bg-slate-100 hover:text-black md:hover:bg-slate-50"
                 >
                   {item.name}
