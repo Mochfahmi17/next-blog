@@ -10,7 +10,8 @@ export async function generateMetadata({
   params,
 }: ExploreCategoryPageProps): Promise<Metadata> {
   const slug = params.slug;
-  const category = await getCategoryByName(slug);
+  const slugdecode = decodeURIComponent(slug);
+  const category = await getCategoryByName(slugdecode);
 
   if (!category) {
     return {
@@ -31,10 +32,11 @@ export async function generateMetadata({
 export default function ExploreCategoryPage({
   params,
 }: ExploreCategoryPageProps) {
-  const category = params.slug;
+  const categoryEncode = params.slug;
+  const categoryDecode = decodeURIComponent(categoryEncode);
   return (
     <main className="animate__animated animate__fadeIn">
-      <Explore category={category} />
+      <Explore category={categoryDecode} />
     </main>
   );
 }
