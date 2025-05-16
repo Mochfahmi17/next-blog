@@ -42,7 +42,7 @@ const ContactForm = () => {
     });
   };
   return (
-    <section className="pt-14 pb-8">
+    <section className="py-8">
       <div className="container mx-auto px-[3%]">
         <div className="grid gap-6 md:grid-cols-12">
           <div className="md:col-span-6">

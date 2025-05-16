@@ -37,7 +37,7 @@ const DetailBlog = ({ blog }: DetailBlogProps) => {
             alt={blog.title}
             width={1024}
             height={300}
-            className="mt-8 aspect-video object-cover object-center"
+            className="mt-8 aspect-video rounded-sm object-cover object-center"
           />
         </header>
         <section className="prose mt-12 max-w-none md:px-[3%]">

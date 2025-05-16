@@ -6,28 +6,33 @@ import Pagination from "./pagination";
 import CategorySidebar from "./category-sidebar";
 
 type ExploreProps = {
-  searchParams: { page?: string; search?: string };
+  category?: string;
+  searchParams?: { page?: string; search?: string };
 };
 
-const Explore = ({ searchParams }: ExploreProps) => {
-  const currentPage = parseInt(searchParams.page || "1");
+const Explore = ({ searchParams, category }: ExploreProps) => {
+  const currentPage = parseInt(searchParams?.page || "1");
+  console.log(category);
   const limit = 12;
-  const search = searchParams.search || "";
+  const search = searchParams?.search || "";
 
-  const { posts, totalPages } =
-    use(getPaginatedPosts(currentPage, limit, search)) ?? [];
+  const { posts, totalPages } = use(
+    getPaginatedPosts(currentPage, limit, search, category),
+  );
   return (
     <section className="pt-20 pb-8">
       <div className="container mx-auto px-[3%]">
         <div className="grid justify-center gap-8 md:grid-cols-12">
           <div className="md:col-span-9">
-            <p className="mb-3 text-lg font-bold">Blogs</p>
+            <p className="mb-3 text-lg font-bold">
+              {category ? category : "Blogs"}
+            </p>
             <SearchBar initialSearch={search} />
             <BlogLists posts={posts} />
             <Pagination currentPage={currentPage} totalPages={totalPages} />
           </div>
           <div className="md:col-span-3">
-            <CategorySidebar />
+            <CategorySidebar categoryName={category} />
           </div>
         </div>
       </div>

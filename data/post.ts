@@ -67,12 +67,14 @@ export async function getPaginatedPosts(
   page: number = 1,
   limit: number = 12,
   query: string = "",
+  category: string = "",
 ) {
   const skip = (page - 1) * limit;
 
   const where: Prisma.PostWhereInput = {
     status: "Publish",
     ...(query && { title: { contains: query, mode: "insensitive" } }),
+    ...(category && { category: { name: category } }),
   };
 
   const [posts, totalPosts] = await Promise.all([

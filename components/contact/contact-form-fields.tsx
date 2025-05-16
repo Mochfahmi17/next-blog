@@ -27,14 +27,14 @@ const ContactFormFields = ({
 }: ContactFormFieldsProps) => {
   return (
     <>
-      <CardHeader>
+      <CardHeader className="px-0 md:px-6">
         <h2 className="text-2xl font-semibold">Let&apos;s Talk!</h2>
         <p className="border-b-2 pb-4 text-slate-500">
           Get in touch with us using the enquiry from or
-          <br /> contact detils below.
+          <br className="hidden md:block" /> contact detils below.
         </p>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-0 md:px-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <div className="space-y-4">
@@ -118,7 +118,7 @@ const ContactFormFields = ({
               disabled={isPending}
               className="w-full cursor-pointer"
             >
-              Send Message
+              {isPending ? "Sending Message..." : "Send Message"}
             </Button>
           </form>
         </Form>

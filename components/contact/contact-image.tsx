@@ -3,7 +3,7 @@ import { CardHeader } from "@/components/ui/card";
 
 const ContactImage = () => {
   return (
-    <CardHeader>
+    <CardHeader className="px-0 md:px-6">
       <div className="relative flex h-80 w-full justify-center md:h-[500px]">
         <Image
           src="/contact.jpg"

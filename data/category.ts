@@ -9,3 +9,15 @@ export async function getCategories() {
     console.error("Failed to fetch categories: ", error);
   }
 }
+
+export async function getCategoryByName(categoryName: string) {
+  try {
+    const category = await db.category.findFirst({
+      where: { name: categoryName },
+    });
+
+    return category;
+  } catch (error) {
+    console.error("failed to fetch category: ", error);
+  }
+}

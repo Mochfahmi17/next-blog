@@ -5,7 +5,6 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
-import { GiPlainCircle } from "react-icons/gi";
 import Image from "next/image";
 import { Category, Post, User } from "@prisma/client";
 import getExcerpt from "@/lib/utils/getExcerpt";
@@ -14,11 +13,16 @@ import Link from "next/link";
 
 type CardBlogProps = {
   blog: Post & { category: Category; author: User };
+  index: number;
 };
 
-const CardBlog = ({ blog }: CardBlogProps) => {
+const CardBlog = ({ blog, index }: CardBlogProps) => {
   return (
-    <Card className="w-full border-0 shadow-none">
+    <Card
+      data-aos="fade-down"
+      data-aos-delay={index * 200}
+      className="w-full border-0 shadow-none"
+    >
       <CardHeader className="px-0">
         <Link href={`/blog/${blog.slug}`} title={blog.title}>
           <Image
@@ -56,13 +60,12 @@ const CardBlog = ({ blog }: CardBlogProps) => {
         </Avatar>
         <div
           title={blog.author.name}
-          className="flex items-center gap-1 text-sm font-medium text-gray-700"
+          className="flex w-full items-center justify-between text-sm font-medium text-gray-700"
         >
           <p className="max-w-32 truncate">{blog.author.name}</p>
           <span className="whitespace-nowrap">
-            <GiPlainCircle className="size-2 text-black" />
-          </span>{" "}
-          {moment(blog.createdAt).format("LLL")}
+            • {moment(blog.createdAt).format("LLL")}
+          </span>
         </div>
       </CardFooter>
     </Card>

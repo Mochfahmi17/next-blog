@@ -4,7 +4,7 @@ import { CardContent } from "@/components/ui/card";
 
 const ContactInformation = () => {
   return (
-    <CardContent>
+    <CardContent className="px-0 md:px-6">
       <div className="space-y-4 md:px-8">
         <div className="flex items-center gap-3">
           <Button

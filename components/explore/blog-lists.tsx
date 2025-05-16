@@ -12,10 +12,14 @@ type BlogListsProps = {
 
 const BlogLists = ({ posts }: BlogListsProps) => {
   return (
-    <div className="grid items-stretch gap-6 md:grid-cols-2">
-      {posts.map((blog) => (
-        <CardBlog key={blog.id} blog={blog} />
-      ))}
+    <div className="mt-4 grid items-stretch gap-8 md:grid-cols-2">
+      {posts.length > 0 ? (
+        posts.map((blog, i) => <CardBlog key={blog.id} blog={blog} index={i} />)
+      ) : (
+        <div className="mt-4">
+          <p className="font-semibold">Blog not found!</p>
+        </div>
+      )}
     </div>
   );
 };

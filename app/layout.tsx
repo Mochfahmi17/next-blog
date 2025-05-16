@@ -4,6 +4,8 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import Footer from "@/components/footer/footer";
 import NavbarWrapper from "@/components/navbar/navbar-wrapper";
+import "animate.css";
+import AOSWrapper from "@/components/aos-wrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "blog | Latest Insights on Lifestyle, Technology, and Sports",
+  title: "Welcome to blog - Your Source for Latest Articles and Insights",
   description:
-    "Stay updated with the latest articles on lifestyle, technology, and sports. Discover trends, tips, and in-depth insights here!",
+    "Discover the latest articles, tutorials, and insights on technology, lifestyle, and more. Stay updated with blog!",
 };
 
 export default function RootLayout({
@@ -32,6 +34,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavbarWrapper />
+        <AOSWrapper />
         {children}
         <Footer />
         <Toaster position="top-right" />

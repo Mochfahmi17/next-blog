@@ -7,7 +7,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main>
+    <main className="animate__animated animate__fadeIn">
       <section className="grid h-screen w-full grid-cols-1 justify-center p-2 md:grid-cols-2 md:gap-2">
         <div className="relative h-full w-full place-self-center self-center overflow-hidden rounded-md md:block">
           <Image
