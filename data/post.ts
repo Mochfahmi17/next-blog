@@ -1,15 +1,10 @@
-import { auth } from "@/auth";
 import { db } from "@/lib/db";
 import { Prisma } from "@prisma/client";
 
-export async function getPostsByAuthor() {
+export async function getPostsByAuthor(userSessionId: string | undefined) {
   try {
-    const session = await auth();
-
-    if (!session) return [];
-
     const posts = await db.post.findMany({
-      where: { authorId: session.user.id },
+      where: { authorId: userSessionId },
       orderBy: { createdAt: "desc" },
       include: { category: true, author: true },
     });

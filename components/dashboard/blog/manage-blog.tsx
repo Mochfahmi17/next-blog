@@ -4,9 +4,11 @@ import { Eye, MessageCircle, SquarePen, Tags, Trash2 } from "lucide-react";
 import { use } from "react";
 import { getPostsByAuthor } from "@/data/post";
 import { DeleteButton, EditButton } from "./button";
+import { auth } from "@/auth";
 
 const ManageBlog = () => {
-  const posts = use(getPostsByAuthor());
+  const session = use(auth());
+  const posts = use(getPostsByAuthor(session?.user.id));
   return (
     <div>
       <h1 className="mb-4 text-3xl font-bold">Manage blog</h1>
