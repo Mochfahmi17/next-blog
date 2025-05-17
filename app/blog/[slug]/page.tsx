@@ -6,13 +6,13 @@ import { notFound } from "next/navigation";
 import { use } from "react";
 
 type DetailBlogPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({
   params,
 }: DetailBlogPageProps): Promise<Metadata> {
-  const slug = params.slug;
+  const slug = (await params).slug;
   const blog = await getBlogBySlug(slug);
 
   if (!blog) {
@@ -32,7 +32,7 @@ export async function generateMetadata({
 }
 
 export default function DetailBlogPage({ params }: DetailBlogPageProps) {
-  const { slug } = params;
+  const { slug } = use(params);
   const blog = use(getBlogBySlug(slug));
   if (!blog) return notFound();
   return (

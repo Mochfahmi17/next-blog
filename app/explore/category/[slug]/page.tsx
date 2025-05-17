@@ -1,15 +1,16 @@
 import Explore from "@/components/explore/explore";
 import { getCategoryByName } from "@/data/category";
 import { Metadata } from "next";
+import { use } from "react";
 
 type ExploreCategoryPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({
   params,
 }: ExploreCategoryPageProps): Promise<Metadata> {
-  const slug = params.slug;
+  const slug = (await params).slug;
   const slugdecode = decodeURIComponent(slug);
   const category = await getCategoryByName(slugdecode);
 
@@ -32,7 +33,7 @@ export async function generateMetadata({
 export default function ExploreCategoryPage({
   params,
 }: ExploreCategoryPageProps) {
-  const categoryEncode = params.slug;
+  const categoryEncode = use(params).slug;
   const categoryDecode = decodeURIComponent(categoryEncode);
   return (
     <main className="animate__animated animate__fadeIn">
