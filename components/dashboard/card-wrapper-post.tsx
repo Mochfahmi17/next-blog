@@ -15,7 +15,7 @@ const CardWrapperPost = ({
   cardTitle,
 }: CardWrapperPostProps) => {
   return (
-    <Card className="max-w-screen">
+    <Card className="w-full">
       <CardHeader>
         <HeaderListBlog
           title={cardTitle}

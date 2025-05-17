@@ -16,7 +16,6 @@ type TitleFieldProps = {
 };
 
 const TitleField = ({ form, isPending }: TitleFieldProps) => {
-  console.log("Title field re render");
   return (
     <FormField
       control={form.control}

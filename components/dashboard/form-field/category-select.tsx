@@ -28,7 +28,6 @@ const CategorySelect = ({
   categories,
   isPending,
 }: CategorySelectProps) => {
-  console.log("category component re-render");
   return (
     <FormField
       control={form.control}

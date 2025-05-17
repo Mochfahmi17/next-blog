@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 
 export default function BlogEditPage({ params }: { params: { id: string } }) {
   const blogId = params.id;
-  console.log(blogId);
   return (
     <div className="space-y-6 py-4 md:px-6">
       <EditBlog id={blogId} />

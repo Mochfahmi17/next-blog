@@ -7,7 +7,6 @@ import { DeleteButton, EditButton } from "./button";
 
 const ManageBlog = () => {
   const posts = use(getPostsByAuthor());
-  console.log(posts);
   return (
     <div>
       <h1 className="mb-4 text-3xl font-bold">Manage blog</h1>

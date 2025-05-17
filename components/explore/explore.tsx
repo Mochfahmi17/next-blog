@@ -12,7 +12,6 @@ type ExploreProps = {
 
 const Explore = ({ searchParams, category }: ExploreProps) => {
   const currentPage = parseInt(searchParams?.page || "1");
-  console.log(category);
   const limit = 12;
   const search = searchParams?.search || "";
 

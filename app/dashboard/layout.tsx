@@ -22,7 +22,7 @@ export default function DashboardLayout({
 }) {
   const session = use(auth());
   return (
-    <main>
+    <main className="overflow-hidden">
       <SidebarProvider>
         <SidebarDashboard />
         <section className="w-full bg-slate-50 px-2">

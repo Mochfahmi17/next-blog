@@ -31,14 +31,12 @@ type UploadResult = {
 };
 
 const ImageUploader = ({ form, isPending }: ImageUploaderProps) => {
-  console.log("Image uploader re-render");
   const [isUploading, setIsUploading] = useState<boolean>(false);
 
   const imageValue = useWatch({ control: form.control, name: "image" });
   const publicId = useWatch({ control: form.control, name: "image_public_id" });
 
   const handleChangeImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("handleChangeImage rendered");
     setIsUploading(true);
     const file = e.target.files?.[0];
 
@@ -68,7 +66,6 @@ const ImageUploader = ({ form, isPending }: ImageUploaderProps) => {
   };
 
   const handleDeleteImage = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log("handleDeleteImage rendered");
     e.preventDefault();
     if (!publicId) return toast.error("image not found!");
 

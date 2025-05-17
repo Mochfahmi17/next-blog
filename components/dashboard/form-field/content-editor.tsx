@@ -15,7 +15,6 @@ type ContentEditorProps = {
 };
 
 const ContentEditor = ({ form }: ContentEditorProps) => {
-  console.log("content Editor re render");
   return (
     <FormField
       control={form.control}

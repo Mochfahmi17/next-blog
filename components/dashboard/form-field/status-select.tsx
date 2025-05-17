@@ -22,7 +22,6 @@ type StatusSelectProps = {
 };
 
 const StatusSelect = ({ form, isPending }: StatusSelectProps) => {
-  console.log("status component re-render");
   return (
     <FormField
       control={form.control}

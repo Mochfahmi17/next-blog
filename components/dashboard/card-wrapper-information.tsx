@@ -12,7 +12,7 @@ const CardWrapperInformation = ({
   children,
 }: CardWrapperInformationProps) => {
   return (
-    <Card className="w-full md:w-52">
+    <Card className="w-full">
       <CardHeader>
         <HeaderImage src={headerSrc} />
       </CardHeader>

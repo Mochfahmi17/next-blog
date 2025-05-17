@@ -12,7 +12,7 @@ const DashboardContent = () => {
   const user = session?.user.id ? use(getUserDetails(session.user.id)) : null;
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-24 md:flex-row">
+      <div className="grid gap-24 md:grid-cols-2">
         <CardWrapperAvatar
           headerName={session ? session.user.name : null}
           headerRole={
@@ -26,14 +26,14 @@ const DashboardContent = () => {
             Total Post
           </p>
         </CardWrapperAvatar>
-        <div className="flex flex-1 items-center gap-6">
+        <div className="grid grid-cols-2 gap-6">
           <CardWrapperInformation headerSrc="/comment.png">
             <p className="text-sm font-medium text-slate-500">Comments</p>
-            <p className="text-xl font-semibold">34,267</p>
+            <p className="text-xl font-semibold">0</p>
           </CardWrapperInformation>
           <CardWrapperInformation headerSrc="/like.png">
             <p className="text-sm font-medium text-slate-500">Total Likes</p>
-            <p className="text-xl font-semibold">65.26K</p>
+            <p className="text-xl font-semibold">0</p>
           </CardWrapperInformation>
         </div>
       </div>
