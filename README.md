@@ -18,9 +18,13 @@
 
 ## Full Page Version
 ![full-page](https://github.com/user-attachments/assets/1147a0fd-7af8-4a01-a3be-c61af3f5836b)
+
 ![fullpage explore-page](https://github.com/user-attachments/assets/b600b2a4-9089-4b8d-8c5d-11b0bf758455)
+
 ![fullpage detail-blog-page](https://github.com/user-attachments/assets/95a28f7d-cab9-48da-bdc8-18c3dadff6de)
+
 ![fullpage about-us-page](https://github.com/user-attachments/assets/5eebe46c-b2f9-4b52-8268-a9034f81df2d)
+
 ![fullpage contact-us-page](https://github.com/user-attachments/assets/c90aeb5b-1ac6-4fba-97e5-d1881ec7da3b)
 
 # blog
@@ -51,7 +55,7 @@ Discover content that is relevant, useful, and entertaining whether you're looki
 - PostgreSQL
 - Prisma ORM
 - Cloudinary (uploading image or other file)
-- zod
+- zod (validation)
 - clsx
 - Animate.css
 - AOS
