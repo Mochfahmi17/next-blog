@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# preview
+![thumbnail](https://github.com/user-attachments/assets/327acc6a-47bc-4721-8d3e-51c09af49e2e)
 
-## Getting Started
+## homepage
+![Macbook-Air-blog-eight-zeta-11 vercel app](https://github.com/user-attachments/assets/e6d04e03-5194-4647-9f3c-b2172589b8e8)
 
-First, run the development server:
+## Explore Page
+![explore-page](https://github.com/user-attachments/assets/ed57e846-a38e-4377-970f-5d5ffa78c164)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Detail Blog Page
+![detail-blog-page](https://github.com/user-attachments/assets/46b9deb1-d7c9-45af-80dc-596633163a7f)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About Page
+![about-us-page](https://github.com/user-attachments/assets/b68cc288-28be-449e-98d0-2a1af232d255)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contact Page
+![contact-page](https://github.com/user-attachments/assets/a8ed6baa-002b-4087-9eda-8ac61f42c847)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Full Page Version
+![full-page](https://github.com/user-attachments/assets/1147a0fd-7af8-4a01-a3be-c61af3f5836b)
 
-## Learn More
+![fullpage explore-page](https://github.com/user-attachments/assets/b600b2a4-9089-4b8d-8c5d-11b0bf758455)
 
-To learn more about Next.js, take a look at the following resources:
+![fullpage detail-blog-page](https://github.com/user-attachments/assets/95a28f7d-cab9-48da-bdc8-18c3dadff6de)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![fullpage about-us-page](https://github.com/user-attachments/assets/5eebe46c-b2f9-4b52-8268-a9034f81df2d)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![fullpage contact-us-page](https://github.com/user-attachments/assets/c90aeb5b-1ac6-4fba-97e5-d1881ec7da3b)
 
-## Deploy on Vercel
+# blog
+**blog** is a place where ideas, inspiration, and information come together. This website features a variety of engaging articles on lifestyle, technology, sports, and other current topics. With a clean and easy-to-navigate design, **blog** is crafted to provide a pleasant and comfortable reading experience for every visitor.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Discover content that is relevant, useful, and entertaining whether you're looking to broaden your knowledge, find practical tips, or simply enjoy some light reading in your free time. Blog is committed to consistently delivering high-quality writing with a fresh and original perspective.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Feautures:
+- Homepage
+- Explore Page
+- Article Categories
+- Article Search
+- Article Detail Page
+- Responsive Design
+- About Page
+- Contact Page
+- Admin Panel (admin login, Create, edit, and delete articles, Upload images for articles)
+
+## Tech Stack:
+- NextJS
+- ReactJS
+- TypeScript
+- TailwindCSS
+- Shadcn UI
+- Lucide Icons
+- React Icons
+- NextAuth v5 (for authentication)
+- PostgreSQL
+- Prisma ORM
+- Cloudinary (uploading image or other file)
+- zod (validation)
+- clsx
+- Animate.css
+- AOS
