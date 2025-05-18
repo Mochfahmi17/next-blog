@@ -1,9 +1,9 @@
-import { ClipLoader } from "react-spinners";
+import LoadingSpinner from "@/components/loading-spinner";
 
 export default function Loading() {
   return (
-    <div className="absolute inset-0 flex items-center justify-center">
-      <ClipLoader />
+    <div className="flex min-h-screen items-center justify-center">
+      <LoadingSpinner />
     </div>
   );
 }
