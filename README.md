@@ -23,3 +23,35 @@
 ![fullpage about-us-page](https://github.com/user-attachments/assets/5eebe46c-b2f9-4b52-8268-a9034f81df2d)
 ![fullpage contact-us-page](https://github.com/user-attachments/assets/c90aeb5b-1ac6-4fba-97e5-d1881ec7da3b)
 
+# blog
+**blog** is a place where ideas, inspiration, and information come together. This website features a variety of engaging articles on lifestyle, technology, sports, and other current topics. With a clean and easy-to-navigate design, **blog** is crafted to provide a pleasant and comfortable reading experience for every visitor.
+
+Discover content that is relevant, useful, and entertaining whether you're looking to broaden your knowledge, find practical tips, or simply enjoy some light reading in your free time. Blog is committed to consistently delivering high-quality writing with a fresh and original perspective.
+
+## Feautures:
+- Homepage
+- Explore Page
+- Article Categories
+- Article Search
+- Article Detail Page
+- Responsive Design
+- About Page
+- Contact Page
+- Admin Panel (admin login, Create, edit, and delete articles, Upload images for articles)
+
+## Tech Stack:
+- NextJS
+- ReactJS
+- TypeScript
+- TailwindCSS
+- Shadcn UI
+- Lucide Icons
+- React Icons
+- NextAuth v5 (for authentication)
+- PostgreSQL
+- Prisma ORM
+- Cloudinary (uploading image or other file)
+- zod
+- clsx
+- Animate.css
+- AOS
