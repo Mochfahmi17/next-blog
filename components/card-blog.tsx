@@ -1,3 +1,4 @@
+"use client";
 import {
   Card,
   CardContent,
@@ -13,16 +14,11 @@ import Link from "next/link";
 
 type CardBlogProps = {
   blog: Post & { category: Category; author: User };
-  index: number;
 };
 
-const CardBlog = ({ blog, index }: CardBlogProps) => {
+const CardBlog = ({ blog }: CardBlogProps) => {
   return (
-    <Card
-      data-aos="fade-down"
-      data-aos-delay={index * 200}
-      className="w-full border-0 shadow-none"
-    >
+    <Card className="w-full border-0 shadow-none">
       <CardHeader className="px-0">
         <Link href={`/blog/${blog.slug}`} title={blog.title}>
           <Image

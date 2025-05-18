@@ -14,7 +14,7 @@ const BlogLists = ({ posts }: BlogListsProps) => {
   return (
     <div className="mt-4 grid items-stretch gap-8 md:grid-cols-2">
       {posts.length > 0 ? (
-        posts.map((blog, i) => <CardBlog key={blog.id} blog={blog} index={i} />)
+        posts.map((blog) => <CardBlog key={blog.id} blog={blog} />)
       ) : (
         <div className="mt-4">
           <p className="font-semibold">Blog not found!</p>
