@@ -62,7 +62,7 @@ const CreateBlogForm = ({
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="grid justify-center gap-5 md:grid-cols-12">
+        <div className="grid items-center gap-5 md:grid-cols-12 md:items-start">
           <div className="rounded-md bg-white px-4 py-8 shadow md:col-span-8">
             <div className="space-y-6">
               <TitleField form={form} isPending={isPending} />

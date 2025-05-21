@@ -86,7 +86,7 @@ const ImageUploader = ({ form, isPending }: ImageUploaderProps) => {
         <FormItem>
           <FormLabel
             className={clsx(
-              "relative flex aspect-video cursor-pointer flex-col items-center justify-center rounded-md border-2 border-dashed border-gray-300 bg-gray-50",
+              "relative flex aspect-video w-[370px] cursor-pointer flex-col items-center justify-center place-self-center rounded-md border-2 border-dashed border-gray-300 bg-gray-50 md:w-full",
               {
                 "cursor-default": imageValue,
               },
